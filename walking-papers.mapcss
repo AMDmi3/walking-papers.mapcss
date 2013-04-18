@@ -120,6 +120,11 @@ line[highway], area[highway] {
 	width: 1.5;
 }
 
+line[highway][!name][!noname], area[highway][!name][!noname] {
+	casing-linecap: none;
+	casing-dashes: 4,4;
+}
+
 line|z15[highway], area|z16[highway] { width : 3.0; }
 line|z16[highway], area|z16[highway] { width : 6.0; }
 line|z17[highway], area|z17[highway] { width : 12.0; }
