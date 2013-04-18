@@ -97,6 +97,10 @@ node|z16-[addr:housenumber], area|z16-[addr:housenumber] {
 	text-position: center;
 }
 
+node|z18[addr:housenumber], area|z18[addr:housenumber] {
+	font-size: 15;
+}
+
 /* addresses without street show in weird color */
 node|z16-[addr:housenumber][!addr:street][!addr:place], area|z16-[addr:housenumber][!addr:street][!addr:place] {
 	text-color: #ffffff;
