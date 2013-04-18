@@ -236,9 +236,14 @@ node|z15-16[barrier], node|z15-16[traffic_calming], node|z15-16[highway=crossing
 	width: 2.0;
 }
 
-node|z17-[barrier], node|z17-[traffic_calming], node|z15-16[highway=crossing] {
+node|z17[barrier], node|z17[traffic_calming], node|z17[highway=crossing] {
 	z-index: 10;
 	width: 4.0;
+}
+
+node|z18-[barrier], node|z18-[traffic_calming], node|z18-[highway=crossing] {
+	z-index: 10;
+	width: 6.0;
 }
 
 /*********************************************************************************
