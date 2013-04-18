@@ -139,8 +139,8 @@ line[highway=steps], area[highway=steps] {
 	z-index: 5;
 	width: 0.5;
 	color: #000000;
-	casing-width: 0.0;
-	casing-linecap: round;
+	casing-width: 0;
+	casing-dashes: 0;
 }
 
 line|z16-[highway=service], area|z16-[highway=service],
@@ -148,7 +148,6 @@ line|z16-[highway=footway], area|z16-[highway=footway],
 line|z16-[highway=steps], area|z16-[highway=steps],
 line|z16-[highway=track], area|z16-[highway=track] {
 	width: 1.0;
-	casing-linecap: round;
 }
 
 line[highway=footway], area[highway=footway],
@@ -167,6 +166,7 @@ line[highway=track], area[highway=track] {
 line[bridge] {
 	casing-width: 2.0;
 	casing-linecap: none;
+	casing-dashes: 0;
 }
 
 /*********************************************************************************
