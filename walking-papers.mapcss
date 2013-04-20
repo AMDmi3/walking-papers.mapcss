@@ -32,25 +32,25 @@ area[amenity][!building], relation[amenity][!building] {
  *********************************************************************************/
 
 /* barriers */
-line[barrier], area[barrier] {
+way[barrier] {
 	z-index: 8;
 	color: #000000;
 	width: 0.5;
 }
 
 /* waterways */
-line[waterway] {
+way[waterway] {
 	z-index: 2;
 	width: 2.0;
 	color: #c0c0c0;
 }
 
-line|z17[waterway] { width: 4.0; }
-line|z18-[waterway] { width: 8.0; }
+way|z17[waterway] { width: 4.0; }
+way|z18-[waterway] { width: 8.0; }
 
-line[waterway=river] { width : 4.0; }
-line|z17[waterway=river] { width : 8.0; }
-line|z18-[waterway=river] { width : 16.0; }
+way[waterway=river] { width : 4.0; }
+way|z17[waterway=river] { width : 8.0; }
+way|z18-[waterway=river] { width : 16.0; }
 
 /* rails */
 line[railway=rail], line[railway=tram] {
@@ -62,8 +62,8 @@ line[railway=rail], line[railway=tram] {
 	dashes: 1,1;
 }
 
-line|z17[railway=rail], line|z17[railway=tram] { width: 2.0; dashes: 1,2; }
-line|z18-[railway=rail], line|z18-[railway=tram] { width: 4.0; dashes: 1,4; }
+way|z17[railway=rail], way|z17[railway=tram] { width: 2.0; dashes: 1,2; }
+way|z18-[railway=rail], way|z18-[railway=tram] { width: 4.0; dashes: 1,4; }
 
 /*********************************************************************************
  * BUILDINGS
@@ -112,7 +112,7 @@ node|z16-[addr:housenumber][!addr:street][!addr:place], area|z16-[addr:housenumb
  *********************************************************************************/
 
 /* important highways */
-line[highway], area[highway] {
+way[highway] {
 	z-index: 6;
 	color: #ffffff;
 	linecap: round;
@@ -124,22 +124,22 @@ line[highway], area[highway] {
 	width: 1.5;
 }
 
-line[highway][!name][!noname], area[highway][!name][!noname] {
+way[highway][!name][!noname] {
 	casing-linecap: none;
 	casing-dashes: 4,4;
 }
 
-line|z15[highway], area|z16[highway] { width : 3.0; }
-line|z16[highway], area|z16[highway] { width : 6.0; }
-line|z17[highway], area|z17[highway] { width : 12.0; }
-line|z18-[highway], area|z18-[highway] { width : 24.0; }
+way|z15[highway] { width : 3.0; }
+way|z16[highway] { width : 6.0; }
+way|z17[highway] { width : 12.0; }
+way|z18-[highway] { width : 24.0; }
 
 /* less important highways */
-line[highway=service], area[highway=service],
-line[highway=track], area[highway=track],
-line[highway=path], area[highway=path],
-line[highway=footway], area[highway=footway],
-line[highway=steps], area[highway=steps] {
+way[highway=service],
+way[highway=track],
+way[highway=path],
+way[highway=footway],
+way[highway=steps] {
 	z-index: 5;
 	width: 0.5;
 	color: #000000;
@@ -147,27 +147,27 @@ line[highway=steps], area[highway=steps] {
 	casing-dashes: 0;
 }
 
-line|z16-[highway=service], area|z16-[highway=service],
-line|z16-[highway=footway], area|z16-[highway=footway],
-line|z16-[highway=steps], area|z16-[highway=steps],
-line|z16-[highway=track], area|z16-[highway=track] {
+way|z16-[highway=service],
+way|z16-[highway=footway],
+way|z16-[highway=steps],
+way|z16-[highway=track] {
 	width: 1.0;
 }
 
-line[highway=footway], area[highway=footway],
-line[highway=steps], area[highway=steps] {
+way[highway=footway],
+way[highway=steps] {
 	dashes: 4,2;
 }
 
-line[highway=path], area[highway=path] {
+way[highway=path] {
 	dashes: 3,3;
 }
 
-line[highway=track], area[highway=track] {
+way[highway=track] {
 	dashes: 4,4;
 }
 
-line[bridge] {
+way[bridge][highway] {
 	casing-width: 2.0;
 	casing-linecap: none;
 	casing-dashes: 0;
@@ -264,6 +264,6 @@ node|z16-[fixme][!place] {
 node|z17[fixme][!place] { width: 8.0; }
 node|z18[fixme][!place] { width: 16.0; }
 
-way[fixme], area[fixme], relation[fixme] {
+way[fixme], relation[fixme] {
 	dashes: 4,2,2,2;
 }
