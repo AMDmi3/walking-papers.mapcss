@@ -124,6 +124,13 @@ way[highway] {
 	width: 1.5;
 }
 
+/* surfaces: unpaved */
+way[highway][surface] {
+	image: fill_sand_gray.png;
+	z-index: 7;
+}
+
+/* unnamed streets */
 way[highway][!name][!noname] {
 	casing-linecap: none;
 	casing-dashes: 4,4;
@@ -145,6 +152,7 @@ way[highway=steps] {
 	color: #000000;
 	casing-width: 0;
 	casing-dashes: 0;
+	image: none;
 }
 
 way|z16-[highway=service],
