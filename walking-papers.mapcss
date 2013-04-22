@@ -4,12 +4,17 @@ canvas { fill-color: #ffffff; }
  * UNRELEVANT AREAS, FOR NAVIGATION
  *********************************************************************************/
 
-area[natural=wood], relation[natural=wood],
+area[natural=wood], relation[natural=wood]
+{
+	z-index: 3;
+	fill-color: #c0c0c0;
+}
+
 area[natural=water], relation[natural=water],
 area[waterway=riverbank], relation[waterway=riverbank]
 {
 	z-index: 3;
-	fill-color: #c0c0c0;
+	fill-color: #b0b0b0;
 }
 
 /*********************************************************************************
@@ -42,7 +47,7 @@ way[barrier] {
 way[waterway] {
 	z-index: 2;
 	width: 2.0;
-	color: #c0c0c0;
+	color: #b0b0b0;
 }
 
 way|z17[waterway] { width: 4.0; }
