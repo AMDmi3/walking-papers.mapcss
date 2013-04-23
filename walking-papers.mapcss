@@ -80,6 +80,11 @@ area[building], relation[building] {
 	width: 0.5;
 }
 
+relation[building] way { // Hack to make contours visible
+	color: black;
+	width: 0.5;
+}
+
 /* emphasize that the building is complete */
 area[building][addr:housenumber][building:levels], relation[building][addr:housenumber][building:levels] {
 	fill-color: #a0a0a0;
