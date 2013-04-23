@@ -151,6 +151,8 @@ way[highway=service],
 way[highway=track],
 way[highway=path],
 way[highway=footway],
+way[highway=cycleway],
+way[highway=bridleway],
 way[highway=steps] {
 	z-index: 5;
 	width: 0.5;
@@ -162,12 +164,16 @@ way[highway=steps] {
 
 way|z16-[highway=service],
 way|z16-[highway=footway],
+way|z16-[highway=cycleway],
+way|z16-[highway=bridleway],
 way|z16-[highway=steps],
 way|z16-[highway=track] {
 	width: 1.0;
 }
 
 way[highway=footway],
+way[highway=cycleway],
+way[highway=bridleway],
 way[highway=steps] {
 	dashes: 4,2;
 }
