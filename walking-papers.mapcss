@@ -101,8 +101,10 @@ area[building][!building:levels], relation[building][!building:levels] {
 node|z16-[addr:housenumber], area|z16-[addr:housenumber] {
 	text: addr:housenumber;
 	font-size: 10;
-	text-color: #000000c0;
-	text-halo-color: #ffffff80;
+	text-color: #000000;
+	text-opacity: 0.75;
+	text-halo-color: #ffffff;
+	text-halo-opacity: 0.5;
 	text-halo-radius: 2;
 	text-position: center;
 }
