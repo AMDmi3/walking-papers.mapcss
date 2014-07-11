@@ -1,3 +1,10 @@
+meta {
+  title: "Walking Papers";
+  description: "Contrast black and white style for printing";
+  author: "AMDmi3";
+  link: "https://github.com/AMDmi3/walking-papers.mapcss";
+}
+
 canvas { fill-color: #ffffff; }
 
 /*********************************************************************************
@@ -58,7 +65,7 @@ way|z17[waterway=river] { width : 8.0; }
 way|z18-[waterway=river] { width : 16.0; }
 
 /* rails */
-line[railway=rail], line[railway=tram] {
+way[railway=rail], way[railway=tram] {
 	z-index: 7;
 	color: #000000;
 	width: 1.0;
@@ -80,7 +87,7 @@ area[building], relation[building] {
 	width: 0.5;
 }
 
-relation[building] way { // Hack to make contours visible
+relation[building] way { /* Hack to make contours visible */
 	color: black;
 	width: 0.5;
 }
@@ -99,7 +106,7 @@ area[building][!building:levels], relation[building][!building:levels] {
  * ADDRESSES
  *********************************************************************************/
 node|z16-[addr:housenumber], area|z16-[addr:housenumber] {
-	text: addr:housenumber;
+	text: tag("addr:housenumber");
 	font-size: 10;
 	text-color: #000000c0;
 	text-halo-color: #ffffff80;
@@ -257,7 +264,7 @@ node|z18-[entrance] {
 node[amenity=bench],
 node[amenity=kindergarten],
 node[amenity=school] {
-	text: no_text_needed;
+	text: "";
 	width: 0;
 	casing-width: 0;
 }
